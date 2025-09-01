@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CO₂ Neutral Engineering – Cost & CO₂ Consulting</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="#" class="logo">
+        <!-- Inline SVG logo: gear + leaf + CO₂ subscript -->
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="CO₂ Neutral Engineering logo">
+          <!-- Gear -->
+          <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="2" />
+          <!-- Leaf -->
+          <path d="M16.5 8C16.5 5 14 3 11 3C11 6 13.5 8 16.5 8Z" fill="currentColor" />
+        </svg>
+        <span class="logo-text">CO₂ Neutral Engineering</span>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-content">
+        <h1>Cost &amp; CO₂ Consulting for the Automotive Industry</h1>
+        <!-- Illustrative gif: engineering precision at work -->
+        <img src="images/hero-image.gif" alt="Engineering precision at work" class="hero-gif" />
+        <p>Helping you achieve cost efficiency and sustainability through expert cost engineering and carbon analysis.</p>
+        <a href="#contact" class="cta-button">Get in Touch</a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="service-list">
+          <div class="service-item">
+            <h3>Cost Engineering &amp; Design‑to‑Cost</h3>
+            <p>Optimise product and process costs from design through production. We build should‑cost models and use design‑to‑cost methodologies to meet your target costs.</p>
+          </div>
+          <div class="service-item">
+            <h3>CO₂ Footprint Analysis</h3>
+            <p>Gain a clear picture of the carbon emissions of your products and processes. We model different scenarios and recommend actions to reduce emissions.</p>
+          </div>
+          <div class="service-item">
+            <h3>Lifecycle Costing</h3>
+            <p>Evaluate total cost of ownership across the entire product life cycle – from materials and manufacturing to end‑of‑life – to inform strategic decisions.</p>
+          </div>
+          <div class="service-item">
+            <h3>Make‑or‑Buy &amp; Negotiation Support</h3>
+            <p>Decide whether to manufacture components in‑house or source them externally. We verify supplier cost claims and support fact‑based negotiations.</p>
+          </div>
+          <div class="service-item">
+            <h3>Cost &amp; Carbon Cleansheeting</h3>
+            <p>Integrated cleansheet models combine bottom‑up cost and CO₂ analysis, providing transparency for sustainable decision‑making.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section id="industries" class="section industries">
+      <div class="container">
+        <h2>Industries We Serve</h2>
+        <p>We specialise in automotive and industrial manufacturing sectors. Whether you are developing electric vehicles, improving traditional powertrains or optimising supply chains, we provide tailored cost and CO₂ consulting solutions.</p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>CO₂ Neutral Engineering is a Romania‑based consulting firm focused on cost engineering and carbon footprint reduction for the automotive industry. Our consultants combine decades of industry experience with advanced analytics to deliver actionable insights and tangible savings.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>Ready to reduce costs and emissions? Send us a message or reach out directly.</p>
+        <div class="contact-info">
+          <p><strong>Email:</strong> <a href="mailto:info@co2neutral.ro">info@co2neutral.ro</a></p>
+          <p><strong>Location:</strong> Romania</p>
+        </div>
+        <!-- Using mailto so the form opens the user's email client. For more advanced form handling, integrate with a service like Formspree. -->
+        <form class="contact-form" action="mailto:info@co2neutral.ro" method="POST" enctype="text/plain">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="cta-button">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> CO₂ Neutral Engineering. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year dynamically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
