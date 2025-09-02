@@ -71,6 +71,20 @@ body {
   color: #00bcd4;
 }
 
+/* Language selector dropdown */
+.language-selector select {
+  background-color: transparent;
+  border: 1px solid #324376;
+  color: #f5f5f5;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.language-selector select option {
+  color: #0d1b2a;
+}
+
 /* Hero */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80') center/cover;
@@ -81,6 +95,16 @@ body {
 
 /* Hero GIF */
 .hero-gif {
+  display: block;
+  max-width: 320px;
+  width: 80%;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero video: mirror styling of the former GIF */
+.hero-video {
   display: block;
   max-width: 320px;
   width: 80%;
@@ -266,13 +290,4 @@ body {
   .hero h1 {
     font-size: 2rem;
   }
-  .hero-video {
-    display: block;
-    max-width: 320px;
-    width: 80%;
-    margin: 1.5rem auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
 }
