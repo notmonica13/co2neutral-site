@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Studies – CO₂ Neutral Engineering</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="index.html" class="logo" aria-label="Home">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="2" />
+          <path d="M16.5 8C16.5 5 14 3 11 3C11 6 13.5 8 16.5 8Z" fill="currentColor" />
+        </svg>
+        <span class="logo-text">CO₂ Neutral Engineering</span>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html#services" data-key="nav_services">Services</a></li>
+          <li><a href="index.html#industries" data-key="nav_industries">Industries</a></li>
+          <li><a href="index.html#about" data-key="nav_about">About</a></li>
+          <li><a href="index.html#contact" data-key="nav_contact">Contact</a></li>
+          <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
+          <li><a href="case-studies.html" data-key="nav_case_studies">Case Studies</a></li>
+          <li><a href="index.html#consultation" data-key="nav_consultation" class="btn accent nav-btn">Book Consultation</a></li>
+          <li class="language-selector">
+            <select id="language-select" aria-label="Choose language">
+              <option value="en">English</option>
+              <option value="ro">Română</option>
+              <option value="de">Deutsch</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="info-section case-studies-page">
+      <div class="container">
+        <h1 data-key="case_heading" class="section-title">Case Studies</h1>
+        <p data-key="case_text">Explore in‑depth analysis of how we help clients achieve cost optimisation and carbon reduction. Detailed case studies will be published soon.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="current-year"></span> CO₂ Neutral Engineering. <span data-key="footer_rights">All rights reserved.</span></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    const translations = {
+      en: {
+        nav_services: 'Services',
+        nav_industries: 'Industries',
+        nav_about: 'About',
+        nav_contact: 'Contact',
+        nav_blog: 'Blog',
+        nav_case_studies: 'Case Studies',
+        nav_consultation: 'Book Consultation',
+        case_heading: 'Case Studies',
+        case_text: 'Explore in‑depth analysis of how we help clients achieve cost optimisation and carbon reduction. Detailed case studies will be published soon.',
+        footer_rights: 'All rights reserved.'
+      },
+      ro: {
+        nav_services: 'Servicii',
+        nav_industries: 'Industrii',
+        nav_about: 'Despre',
+        nav_contact: 'Contact',
+        nav_blog: 'Blog',
+        nav_case_studies: 'Studii de caz',
+        nav_consultation: 'Programează consultarea',
+        case_heading: 'Studii de caz',
+        case_text: 'Explorați analize detaliate despre modul în care ajutăm clienții să atingă optimizarea costurilor și reducerea emisiilor. Studii de caz detaliate vor fi publicate în curând.',
+        footer_rights: 'Toate drepturile rezervate.'
+      },
+      de: {
+        nav_services: 'Dienstleistungen',
+        nav_industries: 'Branchen',
+        nav_about: 'Über uns',
+        nav_contact: 'Kontakt',
+        nav_blog: 'Blog',
+        nav_case_studies: 'Fallstudien',
+        nav_consultation: 'Beratung buchen',
+        case_heading: 'Fallstudien',
+        case_text: 'Entdecken Sie detaillierte Analysen darüber, wie wir unseren Kunden helfen, Kosten zu optimieren und Emissionen zu reduzieren. Ausführliche Fallstudien werden bald veröffentlicht.',
+        footer_rights: 'Alle Rechte vorbehalten.'
+      }
+    };
+    function updateLanguage(lang) {
+      const dict = translations[lang];
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (dict[key]) {
+          el.textContent = dict[key];
+        }
+      });
+    }
+    const select = document.getElementById('language-select');
+    select.addEventListener('change', () => updateLanguage(select.value));
+    updateLanguage('en');
+  </script>
+</body>
+</html>

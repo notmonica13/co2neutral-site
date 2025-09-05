@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CO₂ Neutral Engineering – Cost & CO₂ Consulting</title>
+  <title>CO₂ Neutral Engineering – Cost &amp; CO₂ Consulting</title>
+  <!-- Stylesheet for site design -->
   <link rel="stylesheet" href="styles.css" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Google Fonts: Inter for body text, Montserrat for logo -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- Site header with logo and navigation -->
   <header class="site-header">
     <div class="container header-content">
-      <a href="#" class="logo">
-        <!-- Inline SVG logo: gear + leaf + CO₂ subscript -->
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="CO₂ Neutral Engineering logo">
-          <!-- Gear -->
-          <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none"></circle>
+      <a href="#top" class="logo" aria-label="Home">
+        <!-- Inline SVG logo: stylised gear and leaf -->
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Gear rim -->
+          <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none" />
+          <!-- Gear teeth -->
           <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="2" />
-          <!-- Leaf -->
+          <!-- Leaf motif -->
           <path d="M16.5 8C16.5 5 14 3 11 3C11 6 13.5 8 16.5 8Z" fill="currentColor" />
         </svg>
         <span class="logo-text">CO₂ Neutral Engineering</span>
@@ -28,8 +31,11 @@
           <li><a href="#industries" data-key="nav_industries">Industries</a></li>
           <li><a href="#about" data-key="nav_about">About</a></li>
           <li><a href="#contact" data-key="nav_contact">Contact</a></li>
+          <li><a href="#blog" data-key="nav_blog">Blog</a></li>
+          <li><a href="#case-studies" data-key="nav_case_studies">Case Studies</a></li>
+          <li><a href="#consultation" data-key="nav_consultation" class="btn accent nav-btn">Book Consultation</a></li>
           <li class="language-selector">
-            <select id="language-select">
+            <select id="language-select" aria-label="Choose language">
               <option value="en">English</option>
               <option value="ro">Română</option>
               <option value="de">Deutsch</option>
@@ -40,227 +46,256 @@
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
+  <!-- Main site content -->
+  <main id="top">
+    <!-- Hero section with introduction and hero video -->
     <section class="hero">
       <div class="container hero-content">
-        <h1 data-key="hero_heading">Cost &amp; CO₂ Consulting for the Automotive Industry</h1>
-        <!-- Illustrative video: engineering precision at work -->
+        <h1 data-key="hero_heading" class="hero-title">Cost &amp; CO₂ Consulting for the Automotive Industry</h1>
+        <!-- Illustrative video demonstrating precision engineering -->
         <video src="20250902_1536_Precision Engine Drafting_simple_compose_01k456tzbkfvw849yp7bw0kt0b.mp4" autoplay loop muted playsinline class="hero-video"></video>
-        <p data-key="hero_tagline">Helping you achieve cost efficiency and sustainability through expert cost engineering and carbon analysis.</p>
-        <a href="#contact" class="cta-button" data-key="hero_cta">Get in Touch</a>
+        <p data-key="hero_tagline" class="hero-tagline">Helping you achieve cost efficiency and sustainability through expert cost engineering and carbon analysis.</p>
+        <a href="#services" class="btn accent" data-key="hero_cta">Explore our services</a>
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="section services">
+    <!-- Services section listing consulting offerings -->
+    <section id="services" class="info-section services">
       <div class="container">
-        <h2 data-key="services_title">Our Services</h2>
-        <div class="service-list">
-          <div class="service-item">
-            <h3 data-key="service1_title">Cost Engineering &amp; Design‑to‑Cost</h3>
-            <p data-key="service1_desc">Optimise product and process costs from design through production. We build should‑cost models and use design‑to‑cost methodologies to meet your target costs.</p>
+        <h2 data-key="services_heading" class="section-title">Our Services</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <h3 data-key="service_cost" class="card-title">Cost Engineering</h3>
+            <p data-key="service_cost_desc">Comprehensive cost modelling, should-cost analysis and value engineering to maximise profitability.</p>
           </div>
-          <div class="service-item">
-            <h3 data-key="service2_title">CO₂ Footprint Analysis</h3>
-            <p data-key="service2_desc">Gain a clear picture of the carbon emissions of your products and processes. We model different scenarios and recommend actions to reduce emissions.</p>
+          <div class="card">
+            <h3 data-key="service_co2" class="card-title">CO₂ Analysis</h3>
+            <p data-key="service_co2_desc">Lifecycle emissions calculation, decarbonisation strategies and integrated cost-carbon optimisation.</p>
           </div>
-          <div class="service-item">
-            <h3 data-key="service3_title">Lifecycle Costing</h3>
-            <p data-key="service3_desc">Evaluate total cost of ownership across the entire product life cycle – from materials and manufacturing to end‑of‑life – to inform strategic decisions.</p>
-          </div>
-          <div class="service-item">
-            <h3 data-key="service4_title">Make‑or‑Buy &amp; Negotiation Support</h3>
-            <p data-key="service4_desc">Decide whether to manufacture components in‑house or source them externally. We verify supplier cost claims and support fact‑based negotiations.</p>
-          </div>
-          <div class="service-item">
-            <h3 data-key="service5_title">Cost &amp; Carbon Cleansheeting</h3>
-            <p data-key="service5_desc">Integrated cleansheet models combine bottom‑up cost and CO₂ analysis, providing transparency for sustainable decision‑making.</p>
+          <div class="card">
+            <h3 data-key="service_negotiation" class="card-title">Negotiation Support</h3>
+            <p data-key="service_negotiation_desc">Fact‑based negotiation preparation and cost claim plausibilisation to strengthen supplier relationships.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Industries Section -->
-    <section id="industries" class="section industries">
+    <!-- Industries section -->
+    <section id="industries" class="info-section industries">
       <div class="container">
-        <h2 data-key="industries_title">Industries We Serve</h2>
-        <p data-key="industries_desc">We specialise in automotive and industrial manufacturing sectors. Whether you are developing electric vehicles, improving traditional powertrains or optimising supply chains, we provide tailored cost and CO₂ consulting solutions.</p>
+        <h2 data-key="industries_heading" class="section-title">Industries</h2>
+        <p data-key="industries_text">We specialise in the automotive and industrial manufacturing sectors, partnering with OEMs and Tier‑1 suppliers to improve cost efficiency and sustainability.</p>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
+    <!-- About section -->
+    <section id="about" class="info-section about">
       <div class="container">
-        <h2 data-key="about_title">About Us</h2>
-        <p data-key="about_desc">CO₂ Neutral Engineering is a Romania‑based consulting firm focused on cost engineering and carbon footprint reduction for the automotive industry. Our consultants combine decades of industry experience with advanced analytics to deliver actionable insights and tangible savings.</p>
+        <h2 data-key="about_heading" class="section-title">About Us</h2>
+        <p data-key="about_text">CO₂ Neutral Engineering is a Romanian cost and carbon consulting firm dedicated to helping clients enhance profitability and sustainability through cutting‑edge methodologies and cross‑functional expertise.</p>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
+    <!-- Blog section placeholder -->
+    <section id="blog" class="info-section blog-section">
       <div class="container">
-        <h2 data-key="contact_title">Contact Us</h2>
-        <p data-key="contact_desc">Ready to reduce costs and emissions? Send us a message or reach out directly.</p>
-        <div class="contact-info">
-          <p><strong data-key="contact_email_label">Email:</strong> <a href="mailto:info@co2neutral.ro">info@co2neutral.ro</a></p>
-          <p><strong data-key="contact_location_label">Location:</strong> <span data-key="contact_location_value">Romania</span></p>
-        </div>
-        <!-- Using mailto so the form opens the user's email client. For more advanced form handling, integrate with a service like Formspree. -->
-        <form class="contact-form" action="mailto:info@co2neutral.ro" method="POST" enctype="text/plain">
+        <h2 data-key="blog_heading" class="section-title">Blog</h2>
+        <p data-key="blog_text">Stay tuned for insights and updates on cost engineering, CO₂ analysis and sustainability. Our blog posts are coming soon.</p>
+      </div>
+    </section>
+
+    <!-- Case studies section placeholder -->
+    <section id="case-studies" class="info-section case-studies-section">
+      <div class="container">
+        <h2 data-key="case_heading" class="section-title">Case Studies</h2>
+        <p data-key="case_text">Explore in‑depth analysis of how we help clients achieve cost optimisation and carbon reduction. Detailed case studies will be published soon.</p>
+      </div>
+    </section>
+
+    <!-- Consultation section with Calendly link -->
+    <section id="consultation" class="info-section consultation-section">
+      <div class="container">
+        <h2 data-key="consult_heading" class="section-title">Book a Consultation</h2>
+        <p data-key="consult_text">Ready to transform your products and processes? Schedule a consultation and let’s discuss how we can support your goals.</p>
+        <!-- Note: replace the Calendly link with your actual scheduling URL -->
+        <a href="https://calendly.com/" class="btn accent" data-key="consult_button">Book Consultation</a>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="info-section contact">
+      <div class="container">
+        <h2 data-key="contact_heading" class="section-title">Contact Us</h2>
+        <p data-key="contact_text">Have questions or want to learn more? Get in touch via the form below or email us directly.</p>
+        <form class="contact-form" action="mailto:info@co2neutral.ro" method="post" enctype="text/plain">
           <div class="form-group">
             <label for="name" data-key="form_name_label">Name</label>
-            <input type="text" id="name" name="name" required />
+            <input type="text" id="name" name="name" placeholder="Your Name" required />
           </div>
           <div class="form-group">
             <label for="email" data-key="form_email_label">Email</label>
-            <input type="email" id="email" name="email" required />
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
           </div>
           <div class="form-group">
             <label for="message" data-key="form_message_label">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
           </div>
-          <button type="submit" class="cta-button" data-key="form_submit">Send Message</button>
+          <button type="submit" class="btn accent" data-key="form_submit">Send Message</button>
         </form>
       </div>
     </section>
   </main>
 
+  <!-- Footer with dynamic year -->
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> <span data-key="footer_text">CO₂ Neutral Engineering. All rights reserved.</span></p>
+    <div class="container footer-content">
+      <p>&copy; <span id="current-year"></span> CO₂ Neutral Engineering. <span data-key="footer_rights">All rights reserved.</span></p>
     </div>
   </footer>
 
+  <!-- Translation script: defines translations and handles language switching -->
   <script>
-    // Set current year dynamically
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  <script>
-    // Translation dictionaries and update function
+    // Insert the current year into the footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Translation dictionaries for supported languages
     const translations = {
       en: {
         nav_services: 'Services',
         nav_industries: 'Industries',
         nav_about: 'About',
         nav_contact: 'Contact',
+        nav_blog: 'Blog',
+        nav_case_studies: 'Case Studies',
+        nav_consultation: 'Book Consultation',
         hero_heading: 'Cost & CO₂ Consulting for the Automotive Industry',
         hero_tagline: 'Helping you achieve cost efficiency and sustainability through expert cost engineering and carbon analysis.',
-        hero_cta: 'Get in Touch',
-        services_title: 'Our Services',
-        service1_title: 'Cost Engineering & Design‑to‑Cost',
-        service1_desc: 'Optimise product and process costs from design through production. We build should‑cost models and use design‑to‑cost methodologies to meet your target costs.',
-        service2_title: 'CO₂ Footprint Analysis',
-        service2_desc: 'Gain a clear picture of the carbon emissions of your products and processes. We model different scenarios and recommend actions to reduce emissions.',
-        service3_title: 'Lifecycle Costing',
-        service3_desc: 'Evaluate total cost of ownership across the entire product life cycle – from materials and manufacturing to end‑of‑life – to inform strategic decisions.',
-        service4_title: 'Make‑or‑Buy & Negotiation Support',
-        service4_desc: 'Decide whether to manufacture components in‑house or source them externally. We verify supplier cost claims and support fact‑based negotiations.',
-        service5_title: 'Cost & Carbon Cleansheeting',
-        service5_desc: 'Integrated cleansheet models combine bottom‑up cost and CO₂ analysis, providing transparency for sustainable decision‑making.',
-        industries_title: 'Industries We Serve',
-        industries_desc: 'We specialise in automotive and industrial manufacturing sectors. Whether you are developing electric vehicles, improving traditional powertrains or optimising supply chains, we provide tailored cost and CO₂ consulting solutions.',
-        about_title: 'About Us',
-        about_desc: 'CO₂ Neutral Engineering is a Romania‑based consulting firm focused on cost engineering and carbon footprint reduction for the automotive industry. Our consultants combine decades of industry experience with advanced analytics to deliver actionable insights and tangible savings.',
-        contact_title: 'Contact Us',
-        contact_desc: 'Ready to reduce costs and emissions? Send us a message or reach out directly.',
-        contact_email_label: 'Email:',
-        contact_location_label: 'Location:',
-        contact_location_value: 'Romania',
+        hero_cta: 'Explore our services',
+        services_heading: 'Our Services',
+        service_cost: 'Cost Engineering',
+        service_cost_desc: 'Comprehensive cost modelling, should‑cost analysis and value engineering to maximise profitability.',
+        service_co2: 'CO₂ Analysis',
+        service_co2_desc: 'Lifecycle emissions calculation, decarbonisation strategies and integrated cost‑carbon optimisation.',
+        service_negotiation: 'Negotiation Support',
+        service_negotiation_desc: 'Fact‑based negotiation preparation and cost claim plausibilisation to strengthen supplier relationships.',
+        industries_heading: 'Industries',
+        industries_text: 'We specialise in the automotive and industrial manufacturing sectors, partnering with OEMs and Tier‑1 suppliers to improve cost efficiency and sustainability.',
+        about_heading: 'About Us',
+        about_text: 'CO₂ Neutral Engineering is a Romanian cost and carbon consulting firm dedicated to helping clients enhance profitability and sustainability through cutting‑edge methodologies and cross‑functional expertise.',
+        blog_heading: 'Blog',
+        blog_text: 'Stay tuned for insights and updates on cost engineering, CO₂ analysis and sustainability. Our blog posts are coming soon.',
+        case_heading: 'Case Studies',
+        case_text: 'Explore in‑depth analysis of how we help clients achieve cost optimisation and carbon reduction. Detailed case studies will be published soon.',
+        consult_heading: 'Book a Consultation',
+        consult_text: 'Ready to transform your products and processes? Schedule a consultation and let’s discuss how we can support your goals.',
+        consult_button: 'Book Consultation',
+        contact_heading: 'Contact Us',
+        contact_text: 'Have questions or want to learn more? Get in touch via the form below or email us directly.',
         form_name_label: 'Name',
         form_email_label: 'Email',
         form_message_label: 'Message',
         form_submit: 'Send Message',
-        footer_text: 'CO₂ Neutral Engineering. All rights reserved.'
+        footer_rights: 'All rights reserved.'
       },
       ro: {
         nav_services: 'Servicii',
         nav_industries: 'Industrii',
         nav_about: 'Despre',
         nav_contact: 'Contact',
-        hero_heading: 'Consultanță în Costuri și CO₂ pentru industria auto',
-        hero_tagline: 'Vă ajutăm să atingeți eficiența costurilor și sustenabilitate prin expertiză în inginerie de costuri și analiză de carbon.',
-        hero_cta: 'Contactați‑ne',
-        services_title: 'Serviciile Noastre',
-        service1_title: 'Inginerie de cost și Design‑to‑Cost',
-        service1_desc: 'Optimizăm costurile produselor și proceselor de la design până la producție. Construim modele should‑cost și utilizăm metodologii design‑to‑cost pentru a atinge costurile țintă.',
-        service2_title: 'Analiza amprentei de CO₂',
-        service2_desc: 'Obțineți o imagine clară a emisiilor de carbon ale produselor și proceselor dvs. Modelăm diferite scenarii și recomandăm acțiuni pentru a reduce emisiile.',
-        service3_title: 'Costuri pe durata ciclului de viață',
-        service3_desc: 'Evaluăm costul total de proprietate pe tot ciclul de viață al produsului – de la materiale și producție până la sfârșitul vieții – pentru a ghida deciziile strategice.',
-        service4_title: 'Analiză make‑or‑buy și suport pentru negociere',
-        service4_desc: 'Decideți dacă să produceți componente intern sau să le achiziționați extern. Verificăm revendicările de cost ale furnizorilor și susținem negocieri bazate pe fapte.',
-        service5_title: 'Cleansheet costuri & carbon',
-        service5_desc: 'Modelele cleansheet integrate combină analizele detaliate de cost și CO₂, oferind transparență pentru decizii durabile.',
-        industries_title: 'Industriile pe care le deservim',
-        industries_desc: 'Ne specializăm în sectorul auto și producția industrială. Indiferent dacă dezvoltați vehicule electrice, îmbunătățiți trenurile de putere tradiționale sau optimizați lanțurile de aprovizionare, oferim soluții personalizate de consultanță în costuri și CO₂.',
-        about_title: 'Despre noi',
-        about_desc: 'CO₂ Neutral Engineering este o firmă de consultanță din România specializată în ingineria costurilor și reducerea amprentei de carbon pentru industria auto. Consultanții noștri combină decenii de experiență în industrie cu analize avansate pentru a furniza informații acționabile și economii tangibile.',
-        contact_title: 'Contactați‑ne',
-        contact_desc: 'Gata să reduceți costurile și emisiile? Trimiteți‑ne un mesaj sau contactați‑ne direct.',
-        contact_email_label: 'Email:',
-        contact_location_label: 'Locație:',
-        contact_location_value: 'România',
+        nav_blog: 'Blog',
+        nav_case_studies: 'Studii de caz',
+        nav_consultation: 'Programează consultarea',
+        hero_heading: 'Consultanță de cost și CO₂ pentru industria auto',
+        hero_tagline: 'Vă ajutăm să atingeți eficiența costurilor și durabilitatea prin expertiză în ingineria costurilor și analiza carbonului.',
+        hero_cta: 'Explorați serviciile noastre',
+        services_heading: 'Serviciile noastre',
+        service_cost: 'Inginerie de costuri',
+        service_cost_desc: 'Modelare completă a costurilor, analize de cost și inginerie de valoare pentru a maximiza profitabilitatea.',
+        service_co2: 'Analiza CO₂',
+        service_co2_desc: 'Calcularea emisiilor pe ciclul de viață, strategii de decarbonizare și optimizare cost‑carbon integrată.',
+        service_negotiation: 'Suport pentru negociere',
+        service_negotiation_desc: 'Pregătirea negocierilor bazată pe fapte și verificarea plauzibilității costurilor pentru a întări relațiile cu furnizorii.',
+        industries_heading: 'Industrii',
+        industries_text: 'Ne specializăm în sectoarele auto și de producție industrială, colaborând cu producători și furnizori pentru a îmbunătăți eficiența costurilor și sustenabilitatea.',
+        about_heading: 'Despre noi',
+        about_text: 'CO₂ Neutral Engineering este o firmă românească de consultanță în costuri și carbon dedicată să ajute clienții să își crească profitabilitatea și sustenabilitatea prin metode moderne și expertiză interdisciplinară.',
+        blog_heading: 'Blog',
+        blog_text: 'Rămâneți conectați pentru perspective și noutăți despre ingineria costurilor, analiza CO₂ și sustenabilitate. Articolele noastre vor fi disponibile în curând.',
+        case_heading: 'Studii de caz',
+        case_text: 'Explorați analize detaliate despre modul în care ajutăm clienții să atingă optimizarea costurilor și reducerea emisiilor. Studii de caz detaliate vor fi publicate în curând.',
+        consult_heading: 'Programează o consultare',
+        consult_text: 'Pregătit să vă transformați produsele și procesele? Programați o consultare și să discutăm cum vă putem susține obiectivele.',
+        consult_button: 'Programează consultarea',
+        contact_heading: 'Contactați-ne',
+        contact_text: 'Aveți întrebări sau doriți să aflați mai multe? Contactați-ne prin formularul de mai jos sau prin e‑mail direct.',
         form_name_label: 'Nume',
-        form_email_label: 'Email',
+        form_email_label: 'E-mail',
         form_message_label: 'Mesaj',
         form_submit: 'Trimite mesajul',
-        footer_text: 'CO₂ Neutral Engineering. Toate drepturile rezervate.'
+        footer_rights: 'Toate drepturile rezervate.'
       },
       de: {
         nav_services: 'Dienstleistungen',
         nav_industries: 'Branchen',
         nav_about: 'Über uns',
         nav_contact: 'Kontakt',
-        hero_heading: 'Kosten- und CO₂-Beratung für die Automobilindustrie',
-        hero_tagline: 'Wir helfen Ihnen, Kosteneffizienz und Nachhaltigkeit durch Expertenwissen in Kosteningenieurwesen und Kohlenstoffanalyse zu erreichen.',
-        hero_cta: 'Kontakt aufnehmen',
-        services_title: 'Unsere Dienstleistungen',
-        service1_title: 'Kostenengineering & Design‑to‑Cost',
-        service1_desc: 'Optimieren Sie Produkt- und Prozesskosten vom Design bis zur Produktion. Wir erstellen Should-Cost-Modelle und nutzen Design-to-Cost-Methoden, um Ihre Zielkosten zu erreichen.',
-        service2_title: 'CO₂-Fußabdruckanalyse',
-        service2_desc: 'Verschaffen Sie sich einen klaren Überblick über die Kohlenstoffemissionen Ihrer Produkte und Prozesse. Wir modellieren verschiedene Szenarien und empfehlen Maßnahmen zur Emissionsreduzierung.',
-        service3_title: 'Lebenszykluskosten',
-        service3_desc: 'Bewerten Sie die Gesamtkosten über den gesamten Lebenszyklus des Produkts – von Materialien und Herstellung bis zum Lebensende –, um strategische Entscheidungen zu treffen.',
-        service4_title: 'Make-or-Buy & Verhandlungsunterstützung',
-        service4_desc: 'Entscheiden Sie, ob Komponenten intern gefertigt oder extern bezogen werden sollen. Wir überprüfen Kostenansprüche von Lieferanten und unterstützen faktenbasierte Verhandlungen.',
-        service5_title: 'Kosten- & Kohlenstoff-Cleansheeting',
-        service5_desc: 'Integrierte Cleansheet-Modelle kombinieren detaillierte Kosten- und CO₂-Analysen und bieten Transparenz für nachhaltige Entscheidungen.',
-        industries_title: 'Branchen, die wir bedienen',
-        industries_desc: 'Wir sind auf die Automobil- und Industriefertigungsbranche spezialisiert. Ob Sie Elektrofahrzeuge entwickeln, traditionelle Antriebe verbessern oder Lieferketten optimieren – wir bieten maßgeschneiderte Kosten- und CO₂-Beratungen.',
-        about_title: 'Über uns',
-        about_desc: 'CO₂ Neutral Engineering ist ein in Rumänien ansässiges Beratungsunternehmen, das sich auf Kosteningenieurwesen und Reduzierung des CO₂-Fußabdrucks für die Automobilindustrie spezialisiert hat. Unsere Berater kombinieren jahrzehntelange Branchenerfahrung mit fortgeschrittener Analytik, um umsetzbare Erkenntnisse und greifbare Einsparungen zu liefern.',
-        contact_title: 'Kontakt',
-        contact_desc: 'Bereit, Kosten und Emissionen zu senken? Schicken Sie uns eine Nachricht oder kontaktieren Sie uns direkt.',
-        contact_email_label: 'E‑Mail:',
-        contact_location_label: 'Standort:',
-        contact_location_value: 'Rumänien',
+        nav_blog: 'Blog',
+        nav_case_studies: 'Fallstudien',
+        nav_consultation: 'Beratung buchen',
+        hero_heading: 'Kosten- und CO₂‑Beratung für die Automobilindustrie',
+        hero_tagline: 'Wir helfen Ihnen, Kosteneffizienz und Nachhaltigkeit durch Expertise im Kosteningenieurwesen und in der Kohlenstoffanalyse zu erreichen.',
+        hero_cta: 'Unsere Dienstleistungen entdecken',
+        services_heading: 'Unsere Leistungen',
+        service_cost: 'Kostenengineering',
+        service_cost_desc: 'Umfassende Kostenmodellierung, Should‑Cost‑Analyse und Wertanalyse zur Maximierung der Rentabilität.',
+        service_co2: 'CO₂‑Analyse',
+        service_co2_desc: 'Berechnung der Lebenszyklusemissionen, Dekarbonisierungsstrategien und integrierte Kosten‑Kohlenstoff‑Optimierung.',
+        service_negotiation: 'Verhandlungssupport',
+        service_negotiation_desc: 'Faktenbasierte Verhandlungsvorbereitung und Plausibilisierung von Kostenclaims zur Stärkung der Lieferantenbeziehungen.',
+        industries_heading: 'Branchen',
+        industries_text: 'Wir sind spezialisiert auf die Automobil- und Industrieproduktion, arbeiten mit OEMs und Tier‑1‑Lieferanten zusammen, um Kosteneffizienz und Nachhaltigkeit zu verbessern.',
+        about_heading: 'Über uns',
+        about_text: 'CO₂ Neutral Engineering ist ein rumänisches Beratungsunternehmen für Kosten und Kohlenstoff, das Kunden hilft, Rentabilität und Nachhaltigkeit durch fortschrittliche Methoden und interdisziplinäre Expertise zu steigern.',
+        blog_heading: 'Blog',
+        blog_text: 'Bleiben Sie dran für Einblicke und Neuigkeiten über Kostenengineering, CO₂‑Analyse und Nachhaltigkeit. Unsere Blogbeiträge folgen in Kürze.',
+        case_heading: 'Fallstudien',
+        case_text: 'Entdecken Sie detaillierte Analysen darüber, wie wir unseren Kunden helfen, Kosten zu optimieren und Emissionen zu reduzieren. Ausführliche Fallstudien werden bald veröffentlicht.',
+        consult_heading: 'Beratung buchen',
+        consult_text: 'Bereit, Ihre Produkte und Prozesse zu transformieren? Vereinbaren Sie eine Beratung und lassen Sie uns besprechen, wie wir Ihre Ziele unterstützen können.',
+        consult_button: 'Beratung buchen',
+        contact_heading: 'Kontakt',
+        contact_text: 'Haben Sie Fragen oder möchten Sie mehr erfahren? Kontaktieren Sie uns über das untenstehende Formular oder schreiben Sie uns direkt per E‑Mail.',
         form_name_label: 'Name',
         form_email_label: 'E‑Mail',
         form_message_label: 'Nachricht',
         form_submit: 'Nachricht senden',
-        footer_text: 'CO₂ Neutral Engineering. Alle Rechte vorbehalten.'
+        footer_rights: 'Alle Rechte vorbehalten.'
       }
     };
 
+    /**
+     * Updates the text content of elements with data-key attributes
+     * based on the selected language.
+     * @param {string} lang - Language code ('en', 'ro' or 'de')
+     */
     function updateLanguage(lang) {
-      document.documentElement.lang = lang;
-      const elements = document.querySelectorAll('[data-key]');
-      elements.forEach(el => {
+      const dictionary = translations[lang];
+      document.querySelectorAll('[data-key]').forEach(el => {
         const key = el.getAttribute('data-key');
-        const translation = translations[lang][key];
-        if (translation) {
-          el.innerHTML = translation;
+        if (dictionary[key]) {
+          el.textContent = dictionary[key];
         }
       });
     }
 
+    // Set up language selector change event
     const languageSelect = document.getElementById('language-select');
-    if (languageSelect) {
-      languageSelect.addEventListener('change', function () {
-        updateLanguage(this.value);
-      });
-    }
+    languageSelect.addEventListener('change', () => {
+      updateLanguage(languageSelect.value);
+    });
+
+    // Initialize page with default language
+    updateLanguage('en');
   </script>
 </body>
 </html>
