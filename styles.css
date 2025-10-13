@@ -308,3 +308,12 @@ body {
   text-align: center;
   font-size: 0.875rem;
 }
+
+/* Learning section styles */
+.learning-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
